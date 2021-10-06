@@ -17,11 +17,14 @@ namespace Worker
 				{
 					// We declare the queue here aswell because we might start the consumer before the publisher, make sure the queue exists before trying to consume messages from it
 					channel.QueueDeclare(queue: "task_queue",
-							durable: false,
+							durable: true,
 							exclusive: false,
 							autoDelete: false,
 							arguments: null);
 
+
+					// only one message at a time
+					channel.BasicQos(prefetchSize: 0, prefetchCount: 1, global: false);
 
 					// Server deliver us messages from queue, it will push messages asynchronously, so we provide a callback
 					// That is what EventingBasicConsumer.Received event handler does

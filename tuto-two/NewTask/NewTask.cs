@@ -20,7 +20,7 @@ namespace NewTask
 				{
 					// We declare a queue, a queue is idempotent, it will only be created if it doesn't exist already
 					channel.QueueDeclare(queue: "task_queue",
-							durable: false,
+							durable: true, // dont delete queue when RabbitMQ stops
 							exclusive: false,
 							autoDelete: false,
 							arguments: null);
@@ -28,6 +28,7 @@ namespace NewTask
 					var body = Encoding.UTF8.GetBytes(message);
 
 					var properties = channel.CreateBasicProperties();
+					// Don't delete the queue when RabbitMQ stops
 					properties.Persistent = true;
 
 					channel.BasicPublish(exchange: "",
