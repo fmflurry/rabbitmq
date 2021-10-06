@@ -36,10 +36,12 @@ namespace Worker
 						Thread.Sleep(dots * 1000);
 
 						Console.WriteLine("Done !");
+
+						channel.BasicAck(deliveryTag: ea.DeliveryTag, multiple: false);
 					};
 
 					channel.BasicConsume(queue: "task_queue",
-										 autoAck: true,
+										 autoAck: false,
 										 consumer: consumer);
 					Console.WriteLine("Enter to exit...");
 					Console.ReadLine();
