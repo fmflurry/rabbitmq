@@ -39,6 +39,7 @@ namespace Worker
 						Thread.Sleep(dots * 1000);
 
 						Console.WriteLine("Done !");
+						throw new Exception();
 
 						channel.BasicAck(deliveryTag: ea.DeliveryTag, multiple: false);
 					};
