@@ -7,7 +7,9 @@
 ### Recommended Guides :
 
 
-[Publisher Confirms and Consumer Acknowledgements](https://rabbitmq.com/confirms.html)
-[Production Checklist](https://rabbitmq.com/production-checklist.html)
+[Publisher Confirms and Consumer Acknowledgements](https://rabbitmq.com/confirms.html)  
+
+[Production Checklist](https://rabbitmq.com/production-checklist.html)  
+
 [Monitoring](https://rabbitmq.com/monitoring.html)
 
