@@ -22,4 +22,4 @@
 [RabbitMQ Best practices](https://www.cloudamqp.com/blog/part1-rabbitmq-best-practice.html)  
 
 
-[https://spring.io/blog/2011/04/01/routing-topologies-for-performance-and-scalability-with-rabbitmq/](Routing topologies for Performances and Scalabity with RabbitMQ)
+[https://spring.io/blog/2011/04/01/routing-topologies-for-performance-and-scalability-with-rabbitmq](Routing topologies for Performances and Scalabity with RabbitMQ)
